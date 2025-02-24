@@ -1,6 +1,6 @@
 {
   "name": "zonit",
-  "homepage": "https://tanishqgaur577.github.io/Zonit",
+  "homepage": "https://tanishqgaur577.github.io/Zonit/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview","predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
