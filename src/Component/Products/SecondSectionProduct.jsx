@@ -5,6 +5,7 @@ import timer from "../../../public/Products/timer.png";
 import serverRack from "../../../public/Products/serverRack.png";
 import zlockcable from "../../../public/Products/zlockcable.png";
 import Ellipse from "../../../public/Products/Ellipse.png";
+import SecondSectionLandingPage from "../LandingPage/SecondSectionLandingPage";
 const SecondSectionProduct = () => {
   return (
     <div className="bg-white pb-10  px-4">
@@ -61,44 +62,7 @@ const SecondSectionProduct = () => {
         </div>
 
         {/* Middle Section with Image */}
-        <div className="flex flex-col md:flex-row items-center justify-around ">
-          {/* Server Rack Image */}
-          <div className="w-full md:w-1/2 flex justify-center relative">
-            <div className="h-[300px] w-[300px] bg-blue-100/25 -left-32 -top-2.5 absolute rounded-full"></div>
-            <img src={Ellipse} className="absolute h-full left-1 " alt="" />
-            <div className=" p-4 rounded-lg shadow-md">
-              <img
-                src={serverRack} // Replace with your image URL
-                alt="Server Rack"
-                className="w-[250px] h-[500px]"
-              />
-            </div>
-          </div>
-
-          {/* Z-Lock Card */}
-          <div className="w-[300px] bg-gradient-to-r from-red-700 to-black text-white p-8 rounded-lg shadow-lg">
-            <div className="flex items-center gap-4 mb-6">
-              <img
-                src={zlockcable} // Replace with your Z-Lock icon
-                alt="Z-Lock"
-                className="w-16 bg-white rounded-full h-16"
-              />
-            </div>
-            <h3 className="text-3xl font-semibold">Z-Lock</h3>
-            <p className="text-gray-300 mb-6">
-              Zonit’s locking connectors are universally compatible, providing a
-              secure and dependable connection across all your devices. With
-              Zonit, compatibility and accidental disconnects are concerns of
-              the past.
-            </p>
-            <a
-              href="#"
-              className="text-yellow-400 font-bold inline-flex items-center hover:underline"
-            >
-              Learn More About Z-LOCK →
-            </a>
-          </div>
-        </div>
+        <SecondSectionLandingPage/>
       </div>
     </div>
   );
