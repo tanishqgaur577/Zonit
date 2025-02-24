@@ -74,6 +74,10 @@
 
 // export default BlogSection;
 import { motion } from "framer-motion";
+import press from "../../../public/press.png";
+import blogImage from "../../../public/blogImage.png";
+import speaker from "../../../public/speaker.png";
+
 export default function LatestInsights() {
   return (
     <section className="py-12 px-6 md:px-16 text-center">
@@ -96,7 +100,7 @@ export default function LatestInsights() {
         >
           {" "}
           <img
-            src="/public/blogImage.png"
+            src={blogImage}
             width={400}
             height={300}
             alt="Server Room"
@@ -126,7 +130,7 @@ export default function LatestInsights() {
           className="bg-[#063755] text-white p-6 rounded-lg flex justify-around items-start px-5 flex-col shadow-lg w-[320px]"
         >
           {" "}
-          <img src="/public/speaker.png" alt="" className="h-18 w-18" />
+          <img src={speaker} alt="" className="h-18 w-18" />
           <p className=" gap-4 flex items-center justify-center text-xl font-semibold">
             ZAnnouncement From{" "}
           </p>
@@ -149,7 +153,7 @@ export default function LatestInsights() {
           className="bg-[#063755] text-white p-6 rounded-lg flex justify-around items-start px-5 flex-col shadow-lg w-[320px]"
         >
           {" "}
-          <img src="/public/press.png" alt="" className="h-18 w-18" />
+          <img src={press} alt="" className="h-18 w-18" />
           <p className=" text-xl text-left font-semibold">
             Zonit Unveils Improved Market Leading Universal Dual-Locking Power
             Cords{" "}
