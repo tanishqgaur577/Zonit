@@ -1,0 +1,42 @@
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 8px;
+    /* border: 1px solid gray; */
+    width: 220px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  /* Create the small arrow */
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -12px; /* Adjust to position the arrow above the dropdown */
+    left: 20px; /* Adjust to align with the dropdown */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white; /* Arrow fill color */
+    z-index: 2;
+  }
+  
+  .dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -14px; /* Move slightly above ::before to create border effect */
+    left: 18px; /* Adjust to match the ::before arrow */
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid gray;
+    z-index: 1;
+  }
+  
+  

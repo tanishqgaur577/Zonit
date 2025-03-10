@@ -52,10 +52,11 @@ export default function LatestInsights() {
         <motion.div
           ref={sectionRef}
           whileHover={{
-            scale: 1.05,
+            scale: 1.01,
             y: -8,
             boxShadow: "0px 10px 30px rgba(0,0,0,0.3)",
           }}
+          transition={{ duration: 0.3 }}
           className=" text-white p-6 rounded-lg flex justify-around items-start px-5 flex-col shadow-lg w-[320px]"
         >
           {" "}

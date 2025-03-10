@@ -18,6 +18,7 @@ import BuyZonetProduct from "./Component/BuyZonetProduct/BuyZonetProduct";
 import Compliance from "./Component/ComplianceandEthics/Compliance";
 import Press from "./Component/Press/Press";
 import Patent from "./Component/Patents/Patent";
+import "./App.css";
 import Insight from "./Component/Insight/Insight";
 import ScrollToTop from "./ScrollToTop";
 const App = () => {

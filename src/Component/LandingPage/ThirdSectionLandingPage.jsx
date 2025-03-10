@@ -61,6 +61,8 @@ import serverRack from "../../../public/Homepage/zonitsolution.png";
 import Ellipse from "../../../public/Products/Ellipse.png";
 import zlockcable from "../../../public/Products/zlockcable.png";
 import pattern from "../../../public/Homepage/cardPatterns.png";
+import backgroundImage from "../../../public/Homepage/secondThirdBack.png";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -120,18 +122,79 @@ const ThirdSectionLandingPage = () => {
   };
 
   return (
-    <div ref={sectionRef} className="my-10">
+    <div
+      ref={sectionRef}
+      className="my-10"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+      }}
+    >
       <h1 className="text-[#005487] text-3xl text-center">
         <span className="font-semibold">Solutions</span>{" "}
       </h1>{" "}
       <p className="text-black text-[18px] text-center mt-2.5 mb-2.5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.{" "}
       </p>
-      <div className="flex md:flex-row items-center justify-center mt-14 lg:pr-24">
+      <div className="flex md:flex-row items-center w-full justify-center mt-14 ">
+        {/* Animated Product Card */}
+        <div className=" w-1/2 flex lg:pl-38  justify-center items-center">
+          <div className="relative  w-[320px] h-[420px]  flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedProduct.id}
+                initial={{ maxHeight: 0, opacity: 0 }}
+                animate={{
+                  minHeight: window.innerWidth < 768 ? "360px" : "420px", // Adjust for mobile
+                  opacity: 1,
+                  transition: { duration: 0.8, ease: "easeInOut" },
+                }}
+                exit={{
+                  maxHeight: 0,
+                  opacity: 0,
+                  transition: { duration: 0.3 },
+                }}
+                className="absolute w-[190px] md:w-[320px] flex flex-col justify-around bg-gradient-to-r from-red-700 to-black text-white md:p-6 p-3 rounded-lg shadow-lg overflow-hidden 
+              h-[80px] md:h-[100px]"
+                style={{
+                  backgroundImage: `url(${pattern}), linear-gradient(to right, #B91C1C, #000)`,
+                  backgroundBlendMode: "overlay",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="flex items-center md:gap-4 gap-2 md:mb-4 mb-2">
+                  <img
+                    src={selectedProduct.img}
+                    alt={selectedProduct.title}
+                    className="md:w-16 md:h-16 w-10 h-10 bg-white rounded-full "
+                  />
+                </div>
+                <h3 className="md:text-3xl text-lg font-semibold">
+                  {selectedProduct.title}
+                </h3>
+                <p className="text-gray-300 md:text-lg text-[12px] md:mb-4 mb-2">
+                  {selectedProduct.desc}
+                </p>
+                <a
+                  href="#"
+                  className="text-yellow-400 md:text-[14px] text-[10px] font-bold inline-flex items-center hover:underline"
+                >
+                  Learn More About {selectedProduct.title} →
+                </a>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
         {/* Server Rack img with Clickable Sections */}
-        <div className=" md:w-1/2 flex justify-center relative">
-          <div className="h-[200px] w-[300px] bg-blue-100/25 -left-32 -top-2.5 absolute rounded-full"></div>
-          <img src={Ellipse} className="absolute h-full -left-5 " alt="" />
+        <div className=" md:w-1/2 flex  justify-center relative">
+          {/* <div className="h-[300px] w-[300px] bg-blue-100/25 z-10 md:block hidden right-32 -top-2.5 absolute rounded-full"></div> */}
+          {/* <img
+            src={Ellipse}
+            className="absolute md:block hidden h-full left-16 "
+            alt=""
+          /> */}
           <div className="p-4 rounded-lg relative">
             <div
               className="h-10 w-30 md:h-12 md:w-48  absolute z-10 top-32 left-5 md:top-50 md:-left-7 cursor-pointer"
@@ -149,57 +212,9 @@ const ThirdSectionLandingPage = () => {
             <img
               src={serverRack}
               alt="Server Rack"
-              className="md:w-[250px] md:h-[500px] w-[220px] h-[330px] relative md:-left-18 -left-0"
+              className="md:w-[250px] z-10 md:h-[500px] w-[220px] h-[330px] relative md:-left-18 -left-0"
             />
           </div>
-        </div>
-
-        {/* Animated Product Card */}
-        <div className="relative w-[320px] h-[420px]  flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedProduct.id}
-              initial={{ maxHeight: 0, opacity: 0 }}
-              animate={{
-                minHeight: window.innerWidth < 768 ? "360px" : "400px", // Adjust for mobile
-                opacity: 1,
-                transition: { duration: 0.8, ease: "easeInOut" },
-              }}
-              exit={{
-                maxHeight: 0,
-                opacity: 0,
-                transition: { duration: 0.3 },
-              }}
-              className="absolute w-[190px] md:w-[320px] flex flex-col justify-around bg-gradient-to-r from-red-700 to-black text-white md:p-8 p-3 rounded-lg shadow-lg overflow-hidden 
-              h-[80px] md:h-[100px]"
-              style={{
-                backgroundImage: `url(${pattern}), linear-gradient(to right, #B91C1C, #000)`,
-                backgroundBlendMode: "overlay",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="flex items-center md:gap-4 gap-2 md:mb-6 mb-2">
-                <img
-                  src={selectedProduct.img}
-                  alt={selectedProduct.title}
-                  className="md:w-16 md:h-16 w-10 h-10 bg-white rounded-full "
-                />
-              </div>
-              <h3 className="md:text-3xl text-lg font-semibold">
-                {selectedProduct.title}
-              </h3>
-              <p className="text-gray-300 md:text-lg text-[12px] md:mb-6 mb-2">
-                {selectedProduct.desc}
-              </p>
-              <a
-                href="#"
-                className="text-yellow-400 md:text-[18px] text-[10px] font-bold inline-flex items-center hover:underline"
-              >
-                Learn More About {selectedProduct.title} →
-              </a>
-            </motion.div>
-          </AnimatePresence>
         </div>
       </div>
     </div>

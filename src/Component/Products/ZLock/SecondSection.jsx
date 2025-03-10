@@ -90,7 +90,7 @@ const SecondSection = () => {
       {/* Call to Action Section */}
       <div
         style={{
-          backgroundImage: `linear-gradient(to right, #1E3A8A, black), url(${pattern})`,
+          backgroundImage: `linear-gradient(to right, #1E3A8A, #001521), url(${pattern})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "overlay",
@@ -106,7 +106,7 @@ const SecondSection = () => {
         </p>
         <a
           href="#"
-          className="bg-yellow-500 text-blue-900 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-600"
+          className="bg-yellow-500 duration-150 text-blue-900 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-600"
         >
           Request a Sample →
         </a>

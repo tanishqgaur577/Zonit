@@ -3,14 +3,15 @@ import sliderImage2 from "../../../public/Homepage/sliderImage2.png";
 import sliderImage3 from "../../../public/Homepage/sliderImage3.png";
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+
 import gsap from "gsap";
 const images = [sliderImage1, sliderImage2, sliderImage3];
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
-    const textRef = useRef(null);
-  
+  const textRef = useRef(null);
+
   useEffect(() => {
     gsap.fromTo(
       containerRef.current,
@@ -37,7 +38,7 @@ const ImageCarousel = () => {
   return (
     <div
       ref={containerRef}
-      className="h-[80vh] md:h-[90vh] w-full relative overflow-hidden"
+      className="h-[80vh] mt-18 md:h-[90vh] w-full relative overflow-hidden"
     >
       {/* Heading Section */}
       <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-white text-center z-20 flex justify-center items-center flex-col px-4 md:px-0">
@@ -45,7 +46,9 @@ const ImageCarousel = () => {
           Innovation that's Revolutionizing the world's data center
         </h1>
         <h1 className="relative text-4xl md:text-6xl lg:text-8xl md:px-3 pb-4 whitespace-nowrap mt-6 md:mt-10 font-semibold overflow-hidden">
-          <span className="relative z-10" ref={textRef}>Uptime Essentials</span>
+          <span className="relative z-10" ref={textRef}>
+            Uptime Essentials
+          </span>
 
           {/* Animated Background */}
           <span

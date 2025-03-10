@@ -4,6 +4,7 @@ import serverRack from "../../../public/Products/serverRack.png";
 import Ellipse from "../../../public/Products/Ellipse.png";
 import zlockcable from "../../../public/Products/zlockcable.png";
 import pattern from "../../../public/Homepage/cardPatterns.png";
+import backgroundImage from "../../../public/Homepage/secondThirdBack.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +77,15 @@ const SecondSectionLandingPage = () => {
   };
 
   return (
-    <div ref={sectionRef} className="my-10">
+    <div
+      ref={sectionRef}
+      className="my-10"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+      }}
+    >
       <h1 className="text-[#005487] text-3xl text-center">
         Our <span className="font-semibold">Products</span>
       </h1>
@@ -86,8 +95,12 @@ const SecondSectionLandingPage = () => {
       <div className="flex  md:flex-row items-center justify-center mt-14 lg:pr-24">
         {/* Server Rack img with Clickable Sections */}
         <div className=" md:w-1/2 flex justify-center  relative">
-          <div className="h-[200px] w-[300px] bg-blue-100/25 -left-32 -top-2.5 absolute rounded-full"></div>
-          <img src={Ellipse} className="absolute h-full -left-5 " alt="" />
+          {/* <div className="h-[300px] w-[300px] bg-blue-100/25 md:block hidden -left-32 -top-2.5 absolute rounded-full"></div> */}
+          {/* <img
+            src={Ellipse}
+            className="absolute h-full -left-5 md:block hidden"
+            alt=""
+          /> */}
           <div className="p-4 rounded-lg relative">
             <div
               className="h-8 w-34 md:h-10 md:w-42  absolute z-10  md:top-36 md:-left-5 top-24 -left-20  cursor-pointer"

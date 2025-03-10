@@ -90,7 +90,7 @@ const SecondSection = () => {
       {/* Call to Action Section */}
       <div
         style={{
-          backgroundImage: `linear-gradient(to right, #1E3A8A, black), url(${pattern})`,
+          backgroundImage: `linear-gradient(to right, #1E3A8A, #001521), url(${pattern})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "overlay",

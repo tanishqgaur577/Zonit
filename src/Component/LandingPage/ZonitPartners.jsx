@@ -26,60 +26,60 @@ const Partners = () => {
           Buy Products Through Our Partners <MoveRight className="text-sm" />
         </button>
       </div>
-      <div className=" py-10 px-5 flex-col bg-gradient-to-b relative from-[#015384]  to-[#00131E] flex justify-center items-center w-screen lg:min-h-[80vh] mt-8">
+      <div className="py-[10%]  flex-col bg-gradient-to-b px-[10%] relative from-[#015384]  to-[#00131E] flex justify-center items-center w-screen lg:min-h-[80vh] mt-8">
         <img
           src={one}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-28 left-22 lg:top-76 lg:left-104"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[42%] left-[23.5%]  "
           alt=""
         />
         <img
           src={two}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-32 left-16 lg:top-82 lg:left-94"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[45%] left-[21%] "
           alt=""
         />
         <img
           src={three}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-38 left-16 lg:top-82 lg:left-114"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[49%] left-[21%]"
           alt=""
         />
         <img
           src={four}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-40 left-22 lg:top-92 lg:left-94"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[45%] left-[26%]"
           alt=""
         />
         <img
           src={five}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-38 left-28 lg:top-100 lg:left-104  "
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[49%] left-[26%]  "
           alt=""
         />
         <img
           src={six}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-32 left-28 lg:top-94 lg:left-114"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute hover:scale-200 transition duration-700 top-[46.5%] left-[23.5%]"
           alt=""
         />
         <img
           src={eight}
-          className="lg:h-10 lg:w-10 h-6 w-6 absolute  lg:top-88 lg:left-104 hover:scale-200 transition duration-700 top-34 left-22"
+          className="lg:h-10 lg:w-10 h-6 w-6 absolute   hover:scale-200 transition duration-700 top-[50.5%] left-[23.3%]"
           alt=""
         />
         <img
           src={applan}
-          className="lg:h-16 lg:w-16 h-10 w-10 absolute  lg:top-78 lg:left-190 hover:scale-200 transition duration-700 top-34 left-46"
+          className="lg:h-16 lg:w-16 h-10 w-10 absolute  top-[43%] left-[50%] hover:scale-200 transition duration-700 "
           alt=""
         />
         <img
           src={dexten}
-          className="lg:h-16 lg:w-16 h-10 w-10 absolute  lg:top-78 lg:left-226 hover:scale-200 transition duration-700 top-34 left-62"
+          className="lg:h-16 lg:w-16 h-10 w-10 absolute  top-[45%] left-[60.3%] hover:scale-200 transition duration-700 "
           alt=""
         />
         <img
           src={ready}
-          className="lg:h-16 lg:w-16 h-10 w-10 absolute  lg:top-140 lg:left-270 hover:scale-200 transition duration-700 top-52 left-72"
+          className="lg:h-16 lg:w-16 h-10 w-10 absolute  top-[70%] left-[74.3%] hover:scale-200 transition duration-700 "
           alt=""
         />
         <img
           src={World}
-          className="lg:h-[70%] h-[100%]  w-[100%] object-cover  lg:left-270 lg:w-[70%]"
+          className="lg:h-[100%] h-[100%]  w-[100%] object-cover  lg:left-270 lg:w-[100%]"
           alt=""
         />
       </div>
